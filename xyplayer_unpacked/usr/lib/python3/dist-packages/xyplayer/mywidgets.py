@@ -462,7 +462,7 @@ class SearchFrame(QWidget):
         self.searchBox.lineEdit.returnPressed.connect(self.search_musics)
         self.searchBox.searchComboBox.currentIndexChanged.connect(self.searchtype_changed)
         self.searchBox.resetButton.clicked.connect(self.reset_search)
-        self.searchTable.switchToOnlineListAction.triggered.connect(self.switch_to_list)
+        self.searchTable.switchToOnlineListAction.triggered.connect(self.switch_to_online_list)
         self.searchTable.cellDoubleClicked.connect(self.searchtable_clicked)
         self.searchTable.cellClicked.connect(self.show_tooltip)
         self.searchTable.listenOnlineAction.triggered.connect(self.listen_online)
