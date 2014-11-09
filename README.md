@@ -35,6 +35,7 @@ ubuntu14.04与linuxmint17
 
 方法（2）：步骤一：安装gdebi，执行"sudo apt-get install gdebi"
                         步骤二：执行"sudo gdebi xyplayer_××××_all.deb"
+
 注意：程序安装好后，系统可能自动下载使用gstreamer的phonon后端，在使用效果上远不如vlc的phonon后端，在拖动进度条时很容易卡住，因此最好卸载掉gstreamer的phonon后端。执行“ sudo apt-get remove phonon-backend-gstreamer phonon-backend-gsteamer-common ”即可。
 
 
