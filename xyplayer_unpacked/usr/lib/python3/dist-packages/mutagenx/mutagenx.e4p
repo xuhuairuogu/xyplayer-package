@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric5 project file for project mutagenx -->
+<!-- Saved: 2014-06-09, 23:20:59 -->
+<!-- Copyright (C) 2014 ,  -->
+<Project version="5.1">
+  <Language>en_US</Language>
+  <Hash>ed54e9652147f83c4e923b7552b0508f1e0f3da6</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
+  <ProjectType>Qt4</ProjectType>
+  <Description></Description>
+  <Version>0.1</Version>
+  <Author></Author>
+  <Email></Email>
+  <Sources>
+    <Source>oggflac.py</Source>
+    <Source>__init__.py</Source>
+    <Source>asf.py</Source>
+    <Source>optimfrog.py</Source>
+    <Source>_id3specs.py</Source>
+    <Source>easymp4.py</Source>
+    <Source>monkeysaudio.py</Source>
+    <Source>musepack.py</Source>
+    <Source>mp3.py</Source>
+    <Source>oggopus.py</Source>
+    <Source>_vorbis.py</Source>
+    <Source>flac.py</Source>
+    <Source>oggtheora.py</Source>
+    <Source>_id3frames.py</Source>
+    <Source>trueaudio.py</Source>
+    <Source>_constants.py</Source>
+    <Source>easyid3.py</Source>
+    <Source>wavpack.py</Source>
+    <Source>_util.py</Source>
+    <Source>_compat.py</Source>
+    <Source>oggvorbis.py</Source>
+    <Source>apev2.py</Source>
+    <Source>ogg.py</Source>
+    <Source>id3.py</Source>
+    <Source>mp4.py</Source>
+    <Source>_id3util.py</Source>
+    <Source>aiff.py</Source>
+    <Source>oggspeex.py</Source>
+  </Sources>
+  <Forms/>
+  <Translations/>
+  <Resources/>
+  <Interfaces/>
+  <Others/>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="*.ui.h" type="FORMS"/>
+  </FiletypeAssociations>
+</Project>

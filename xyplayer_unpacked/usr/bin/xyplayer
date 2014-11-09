@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+# Copyright (C) 2013-2014 Zheng-Yejian <1035766515@qq.com>
+
+# Use of this source code is governed by GPLv3 license that can be found
+# in the LICENSE file.
+
+import sys
+from PyQt4.QtGui import QApplication
+
+def main():
+    app = QApplication(sys.argv)
+    app.setApplicationName("xyPlayer")
+    app.setQuitOnLastWindowClosed(True)
+    
+    from xyplayer.player import Player
+    Player = Player()
+    Player.show()
+    sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()
