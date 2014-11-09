@@ -19,7 +19,8 @@ except ImportError:
             QMessageBox.Ok | QMessageBox.Default,
             QMessageBox.NoButton)
     sys.exit(1)
-from xyplayer.mywidgets import DownloadPage, SearchFrame, SettingFrame, DownloadLrcThread, DesktopLyric
+from xyplayer.mywidgets import DownloadPage, SearchFrame, SettingFrame, DesktopLyric
+from xyplayer.mythreads import DownloadLrcThread
 from xyplayer.mytables import TableModel, TableView, SqlOperate, ManageTableView
 from xyplayer.urldispose import SearchOnline
 from xyplayer.configure import Configures
@@ -546,7 +547,7 @@ class Player(QDialog):
         trayMenu.addAction(self.nextAction)
         trayMenu.addAction(self.stopAction)
         trayMenu.addSeparator()
-        trayMenu.addAction(self.aboutAction)
+#        trayMenu.addAction(self.aboutAction)
         trayMenu.addAction(self.exitAction)
         self.trayIcon.setContextMenu(trayMenu)
         self.trayIcon.show()
@@ -1615,7 +1616,6 @@ class Player(QDialog):
         sourceDispose =  Phonon.MediaSource(QUrl(sourcePath))
         self.mediaObject.setCurrentSource(sourceDispose)
         self.mediaObject.play()
-#        print(self.mediaObject.metaData(Phonon.ArtistMetaData))
 
     def is_url_error(self):
         t1 = time.time()
