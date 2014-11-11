@@ -1,4 +1,4 @@
-from PyQt4.QtGui import (QApplication, QMenu, QAction, QMessageBox, QAbstractItemView, 
+from PyQt4.QtGui import (QApplication, QMenu, QAction, QAbstractItemView, 
             QTableView, QTableWidget, QTableWidgetItem, QItemDelegate, 
             QStyleOptionProgressBarV2, QStyle)
 from PyQt4.QtCore import QPoint, Qt

@@ -1,7 +1,7 @@
 import time, os, threading
 from PyQt4.QtGui import (QApplication, QWidget, QIcon, QCursor, QMessageBox,QHBoxLayout, 
         QPushButton, QSpacerItem, QSizePolicy, QVBoxLayout, QDesktopServices, QPalette, QLineEdit,
-        QToolButton, QComboBox, QLabel, QFrame, QFileDialog, QFont, QMenu, QAction)
+        QToolButton, QComboBox, QLabel, QDialog, QFileDialog, QFont, QMenu, QAction)
 from PyQt4.QtCore import Qt, pyqtSignal, QEvent, QTimer, QPoint, QUrl, QSize
 from PyQt4 import QtSql
 from xyplayer.mytables import DownloadTable, DownloadModel, MyDelegate, SearchTable, TableModel
@@ -137,7 +137,7 @@ class DownloadPage(QWidget):
             list_temp = [(title, path_item_temp)]
             thread = DownloadLrcThread(list_temp)
             thread.setDaemon(True)
-            thread.setName("downloadLrc")
+            thread.setName(musicPath)
             thread.start()
             
             if not self.timer.isActive():
@@ -555,7 +555,7 @@ class SearchFrame(QWidget):
     def download(self):
         if not self.searchTable.rowCount():
             return
-        t1 = time.time()
+#        t1 = time.time()
         hasExisted = []
         linkError = []
         self.toBeEmited = []
@@ -593,7 +593,7 @@ class SearchFrame(QWidget):
 #        songInfos = json.dumps(toBeEmited)
         self.add_to_download_signal.emit()
         self.setCursor(QCursor(Qt.ArrowCursor))
-        print('searchPageWidget.py searchFrame.download timecost = %s'%(time.time()-t1))
+#        print('searchPageWidget.py searchFrame.download timecost = %s'%(time.time()-t1))
         if len(hasExisted):
             hasExistFiles = '\n'.join(hasExisted)
             self.show()
@@ -707,7 +707,7 @@ class SearchFrame(QWidget):
         print('searchPageWidget.py searchFrame.show_musics %s'%(t2 - t1))
         return hit
 
-class SettingFrame(QFrame):
+class SettingFrame(QDialog):
     downloadDirChanged = pyqtSignal(str)
     def __init__(self, parent = None):
         super(SettingFrame, self).__init__(parent)

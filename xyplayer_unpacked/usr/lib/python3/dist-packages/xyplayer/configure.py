@@ -1,7 +1,7 @@
 import os
 
 class Configures():
-    INSTALLPATH = '/usr/lib/python3/dist-packages/xyplayer'
+#    INSTALLPATH = '/usr/lib/python3/dist-packages/xyplayer'
     NOERROR = -1
     URLERROR = -2
     TYPEERROR = -3
@@ -24,4 +24,5 @@ class Configures():
         if not os.path.exists(Configures.settingFile):
             with open(Configures.settingFile, 'w') as f:
                 f.write(Configures.musicsDir)
+                f.close()
             

@@ -1194,7 +1194,7 @@ class Player(QDialog):
             self.musicTable.selectRow(self.currentSourceRow)
         if newState == Phonon.ErrorState:
             self.noError = 0
-            sourceDispose =  Phonon.MediaSource("file://" + Configures.INSTALLPATH + "/" + "error.ogg")
+            sourceDispose =  Phonon.MediaSource("/usr/share/sounds/error_happened.ogg")
             self.mediaObject.setCurrentSource(sourceDispose)
             self.mediaObject.play()
             self.show()
@@ -1588,7 +1588,7 @@ class Player(QDialog):
             isErrorHappen = self.is_url_error()
             if isErrorHappen:
                 self.noError = 0
-                sourceDispose =  Phonon.MediaSource("file://" + Configures.INSTALLPATH + "/" + "error.ogg")
+                sourceDispose =  Phonon.MediaSource("/usr/share/sounds/error_happened.ogg")
                 self.mediaObject.setCurrentSource(sourceDispose)
                 self.mediaObject.play()
                 if self.isHidden():
@@ -1606,7 +1606,7 @@ class Player(QDialog):
                 sourcePath=self.model.record(row).value('paths')
             else:
                 self.noError = 0
-                sourceDispose =  Phonon.MediaSource('file://' + Configures.INSTALLPATH + "/"+"error.ogg")
+                sourceDispose =  Phonon.MediaSource("/usr/share/sounds/error_happened.ogg")
                 self.mediaObject.setCurrentSource(sourceDispose)
                 self.mediaObject.play()
                 self.show()
@@ -1771,7 +1771,7 @@ class Player(QDialog):
         author = '作  者：Zheng-Yejian'
         email = '邮  箱：1035766515@qq.com'
         address = '项目网址：https://github.com/Zheng-Yejian/xyplayer'
-        specification = "说  明：本播放器是我的毕业设计成果，旨在设计一个能实现基本播放以及在线搜索播放媒体资源功能的音乐播放器。由于本人为初学者，程序中大部分代码是边学边用的，因此可能还存在许多实现方法和编程规范方面的问题及一些bug，希望大家通过邮箱与我交流。另外，如果有人愿意协助将程序打包，请与我联系，不胜感谢。"   
+        specification = "说  明：本播放器是我的毕业设计成果，旨在设计一个能实现基本播放以及在线搜索播放媒体资源功能的音乐播放器。谢谢您的使用，如果发现问题，还请与我交流。"   
         thanks = '鸣谢：这里要感谢github上项目kwplayer的作者LiuLang，我正是从他的项目中获取的开发灵感和动力，而且也从中学到了许多东西。该项目的网址为https://github.com/LiuLang/kwplayer。'
         QMessageBox.information(self, "关于xyPlayer","%s\n\n%s\n\n%s\n\n%s\n\n%s"%(author, email, address, specification, thanks))
 
